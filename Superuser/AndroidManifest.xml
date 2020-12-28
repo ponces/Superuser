@@ -17,7 +17,7 @@
         android:name=".SuApplication"
         android:allowBackup="false"
         android:allowClearUserData="false"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher_new"
         android:label="@string/superuser"
         android:theme="@style/Superuser" >
         <activity

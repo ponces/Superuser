@@ -1,23 +1,23 @@
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.5'
-}
-
 buildscript {
     repositories {
+        jcenter()
+        google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.android.tools.build:gradle:4.1.0'
     }
 }
 apply plugin: 'com.android.application'
 
 repositories {
+    google()
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
-    compile project(':Widgets')
+    implementation project(':Widgets')
 }
 
 android {
@@ -47,13 +47,13 @@ android {
         }
     }
 
-    compileSdkVersion 22
-    buildToolsVersion '22.0.1'
+    compileSdkVersion 26
+    buildToolsVersion '29.0.2'
 
     defaultConfig {
         File f = new File("packageName")
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 26
         if(f.exists())
             applicationId f.text
         signingConfig signingConfigs.release
