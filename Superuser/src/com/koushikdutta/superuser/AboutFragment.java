@@ -50,7 +50,7 @@ public class AboutFragment extends BetterListFragment {
             public void onClick(View view) {
                 super.onClick(view);
                 Intent i = new Intent();
-                i.setData(Uri.parse("market://details?id=com.koushikdutta.superuser"));
+                i.setData(Uri.parse("http://play.google.com/store/apps/details?id=com.koushikdutta.superuser"));
                 startActivity(i);
             }
         });
@@ -89,7 +89,7 @@ public class AboutFragment extends BetterListFragment {
             public void onClick(View view) {
                 super.onClick(view);
                 Intent i = new Intent();
-                i.setData(Uri.parse("market://details?id=com.koushikdutta.rommanager"));
+                i.setData(Uri.parse("http://play.google.com/store/apps/details?id=com.koushikdutta.rommanager"));
                 startActivity(i);
             }
         });
@@ -98,7 +98,7 @@ public class AboutFragment extends BetterListFragment {
             public void onClick(View view) {
                 super.onClick(view);
                 Intent i = new Intent();
-                i.setData(Uri.parse("market://details?id=com.koushikdutta.backup"));
+                i.setData(Uri.parse("http://play.google.com/store/apps/details?id=com.koushikdutta.backup"));
                 startActivity(i);
             }
         });
@@ -107,7 +107,7 @@ public class AboutFragment extends BetterListFragment {
             public void onClick(View view) {
                 super.onClick(view);
                 Intent i = new Intent();
-                i.setData(Uri.parse("market://details?id=com.koushikdutta.desktopsms"));
+                i.setData(Uri.parse("http://play.google.com/store/apps/details?id=com.koushikdutta.desktopsms"));
                 startActivity(i);
             }
         });
@@ -116,7 +116,7 @@ public class AboutFragment extends BetterListFragment {
             public void onClick(View view) {
                 super.onClick(view);
                 Intent i = new Intent();
-                i.setData(Uri.parse("market://details?id=com.koushikdutta.tether"));
+                i.setData(Uri.parse("http://play.google.com/store/apps/details?id=com.koushikdutta.tether"));
                 startActivity(i);
             }
         });
