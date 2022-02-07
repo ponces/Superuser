@@ -46,8 +46,6 @@ import com.koushikdutta.superuser.db.UidPolicy;
 import com.koushikdutta.superuser.util.Settings;
 import com.koushikdutta.superuser.util.SuHelper;
 
-import junit.framework.Assert;
-
 import java.io.DataInputStream;
 import java.io.File;
 import java.util.HashMap;
@@ -100,35 +98,36 @@ public class MultitaskSuRequestActivity extends Activity {
     }
 
     void handleAction(boolean action, Integer until) {
-        Assert.assertTrue(!mHandled);
-        mHandled = true;
-        try {
-            mSocket.getOutputStream().write((action ? "socket:ALLOW" : "socket:DENY").getBytes());
-        }
-        catch (Exception ex) {
-        }
-        try {
-            if (until == null) {
-                until = getUntil();
+        if (!mHandled) {
+            mHandled = true;
+            try {
+                mSocket.getOutputStream().write((action ? "socket:ALLOW" : "socket:DENY").getBytes());
             }
-            // got a policy? let's set it.
-            if (until != -1) {
-                UidPolicy policy = new UidPolicy();
-                policy.policy = action ? UidPolicy.ALLOW : UidPolicy.DENY;
-                policy.uid = mCallerUid;
-                // for now just approve all commands, since per command approval is stupid
-//                policy.command = mDesiredCmd;
-                policy.command = null;
-                policy.until = until;
-                policy.desiredUid = mDesiredUid;
-                SuDatabaseHelper.setPolicy(this, policy);
+            catch (Exception ex) {
             }
-            // TODO: logging? or should su binary handle that via broadcast?
-            // Probably the latter, so it is consolidated and from the system of record.
+            try {
+                if (until == null) {
+                    until = getUntil();
+                }
+                // got a policy? let's set it.
+                if (until != -1) {
+                    UidPolicy policy = new UidPolicy();
+                    policy.policy = action ? UidPolicy.ALLOW : UidPolicy.DENY;
+                    policy.uid = mCallerUid;
+                    // for now just approve all commands, since per command approval is stupid
+    //                policy.command = mDesiredCmd;
+                    policy.command = null;
+                    policy.until = until;
+                    policy.desiredUid = mDesiredUid;
+                    SuDatabaseHelper.setPolicy(this, policy);
+                }
+                // TODO: logging? or should su binary handle that via broadcast?
+                // Probably the latter, so it is consolidated and from the system of record.
+            }
+            catch (Exception ex) {
+            }
+            finish();
         }
-        catch (Exception ex) {
-        }
-        finish();
     }
 
     @Override
