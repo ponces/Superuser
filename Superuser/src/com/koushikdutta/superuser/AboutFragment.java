@@ -9,6 +9,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 
 import com.koushikdutta.widgets.BetterListFragment;
@@ -29,6 +31,7 @@ public class AboutFragment extends BetterListFragment {
     @Override
     protected void onCreate(Bundle savedInstanceState, View view) {
         super.onCreate(savedInstanceState, view);
+        setHasOptionsMenu(true);
 
         PackageManager manager = getContext().getPackageManager();
         String version = "unknown";
@@ -114,5 +117,11 @@ public class AboutFragment extends BetterListFragment {
                 startActivity(i);
             }
         });
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
     }
 }
