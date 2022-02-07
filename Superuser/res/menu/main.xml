@@ -2,7 +2,7 @@
 
     <item
         android:id="@+id/logs"
-        android:icon="@drawable/ic_file_search_white"
+        android:icon="@drawable/ic_text_box_white"
         android:title="@string/logs"/>
 
 </menu>

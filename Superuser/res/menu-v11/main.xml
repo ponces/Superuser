@@ -2,7 +2,7 @@
     <item 
         android:id="@+id/logs"
         android:title="@string/logs"
-        android:icon="@drawable/ic_file_search_white"
+        android:icon="@drawable/ic_text_box_white"
         android:showAsAction="ifRoom"
         />
 

@@ -26,7 +26,7 @@
         <item name="automaticResponseIcon">@drawable/ic_alert_white</item>
         <item name="pinProtectionIcon">@drawable/ic_lock_white</item>
         <item name="requestTimeoutIcon">@drawable/ic_timelapse_white</item>
-        <item name="loggingIcon">@drawable/ic_file_search_white</item>
+        <item name="loggingIcon">@drawable/ic_text_box_white</item>
         <item name="notificationsIcon">@drawable/ic_bell_white</item>
         <item name="themeIcon">@drawable/ic_brightness_6_white</item>
         
@@ -46,7 +46,7 @@
         <item name="automaticResponseIcon">@drawable/ic_alert</item>
         <item name="pinProtectionIcon">@drawable/ic_lock</item>
         <item name="requestTimeoutIcon">@drawable/ic_timelapse</item>
-        <item name="loggingIcon">@drawable/ic_file_search</item>
+        <item name="loggingIcon">@drawable/ic_text_box</item>
         <item name="notificationsIcon">@drawable/ic_bell</item>
         <item name="themeIcon">@drawable/ic_brightness_6</item>
 
