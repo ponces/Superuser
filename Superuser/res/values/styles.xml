@@ -21,14 +21,14 @@
         <item name="bottomButtonBar">@null</item>
         <item name="bottomButtonBarText">?android:attr/textColorPrimary</item>
 
-        <item name="toggleIcon">@drawable/ic_toggle_dark</item>
-        <item name="multiuserIcon">@drawable/ic_users_dark</item>
-        <item name="automaticResponseIcon">@drawable/ic_alert_dark</item>
-        <item name="pinProtectionIcon">@drawable/ic_protected_dark</item>
-        <item name="requestTimeoutIcon">@drawable/ic_timeout_dark</item>
-        <item name="loggingIcon">@drawable/ic_logging_dark</item>
-        <item name="notificationsIcon">@drawable/ic_notifications_dark</item>
-        <item name="themeIcon">@drawable/ic_theme_dark</item>
+        <item name="toggleIcon">@drawable/ic_cellphone_lock_white</item>
+        <item name="multiuserIcon">@drawable/ic_account_multiple_white</item>
+        <item name="automaticResponseIcon">@drawable/ic_alert_white</item>
+        <item name="pinProtectionIcon">@drawable/ic_lock_white</item>
+        <item name="requestTimeoutIcon">@drawable/ic_timelapse_white</item>
+        <item name="loggingIcon">@drawable/ic_file_search_white</item>
+        <item name="notificationsIcon">@drawable/ic_bell_white</item>
+        <item name="themeIcon">@drawable/ic_brightness_6_white</item>
         
         <item name="largeIconTheme">@style/SuperuserDark.LargeIcon</item>
     </style>
@@ -41,14 +41,14 @@
         <item name="bottomButtonBar">@color/holo_blue_dark</item>
         <item name="bottomButtonBarText">?android:attr/textColorPrimaryInverse</item>
         
-        <item name="toggleIcon">@drawable/ic_toggle</item>
-        <item name="multiuserIcon">@drawable/ic_users</item>
+        <item name="toggleIcon">@drawable/ic_cellphone_lock</item>
+        <item name="multiuserIcon">@drawable/ic_account_multiple</item>
         <item name="automaticResponseIcon">@drawable/ic_alert</item>
-        <item name="pinProtectionIcon">@drawable/ic_protected</item>
-        <item name="requestTimeoutIcon">@drawable/ic_timeout</item>
-        <item name="loggingIcon">@drawable/ic_logging</item>
-        <item name="notificationsIcon">@drawable/ic_notifications</item>
-        <item name="themeIcon">@drawable/ic_theme</item>
+        <item name="pinProtectionIcon">@drawable/ic_lock</item>
+        <item name="requestTimeoutIcon">@drawable/ic_timelapse</item>
+        <item name="loggingIcon">@drawable/ic_file_search</item>
+        <item name="notificationsIcon">@drawable/ic_bell</item>
+        <item name="themeIcon">@drawable/ic_brightness_6</item>
 
         <item name="largeIconTheme">@style/Superuser.LargeIcon</item>
     </style>
