@@ -11,6 +11,7 @@ import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.koushikdutta.widgets.BetterListFragment;
@@ -32,6 +33,8 @@ public class AboutFragment extends BetterListFragment {
     protected void onCreate(Bundle savedInstanceState, View view) {
         super.onCreate(savedInstanceState, view);
         setHasOptionsMenu(true);
+        getActivity().getActionBar().setTitle(R.string.about);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
         PackageManager manager = getContext().getPackageManager();
         String version = "unknown";
@@ -123,5 +126,13 @@ public class AboutFragment extends BetterListFragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            getActivity().onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

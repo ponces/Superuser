@@ -87,4 +87,15 @@ public class MainActivity extends BetterListActivity {
         Settings.applyDarkThemeSetting(this, R.style.SuperuserDarkActivity);
         super.onCreate(savedInstanceState);
     }
+
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getActionBar().setTitle(R.string.superuser);
+            getActionBar().setDisplayHomeAsUpEnabled(false);
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();  
+        }
+    }
 }

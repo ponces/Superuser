@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
@@ -121,6 +122,8 @@ public class SettingsFragment extends BetterListFragment {
     protected void onCreate(Bundle savedInstanceState, View view) {
         super.onCreate(savedInstanceState, view);
         setHasOptionsMenu(true);
+        getActivity().getActionBar().setTitle(R.string.settings);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
         // NOTE to future koush
         // dark icons use the color #f3f3f3
@@ -426,5 +429,13 @@ public class SettingsFragment extends BetterListFragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            getActivity().onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
